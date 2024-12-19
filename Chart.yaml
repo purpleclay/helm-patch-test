@@ -1,0 +1,5 @@
+apiVersion: v2
+name: example
+version: 0.1.0
+description: This is an example chart
+appVersion: v0.1.0

@@ -25,5 +25,5 @@ jobs:
         with:
           verb: call
           module: github.com/purpleclay/daggerverse/nsv@v0.10.1
-          args: --src . patch --hook ./scripts/patch.sh --show --gpg-private-key env:GPG_PRIVATE_KEY --gpg-passphrase env:GPG_PASSPHRASE
+          args: --src . patch --hook scripts/patch.sh --show --gpg-private-key env:GPG_PRIVATE_KEY --gpg-passphrase env:GPG_PASSPHRASE
           cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}

@@ -4,6 +4,9 @@ on:
     tags:
       - "*.*.*"
 
+permissions:
+  contents: write
+
 jobs:
   patch:
     runs-on: ubuntu-24.04
@@ -37,8 +40,6 @@ jobs:
 
       - name: Commit Changes
         run: |
-          git config --global --list
           git add VERSION
           git commit -S -m "chore(deps): bump version to ${{ steps.strip_tag.outputs.tag }} [skip ci]"
-          git log -1
           git push

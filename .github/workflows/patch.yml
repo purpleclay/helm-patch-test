@@ -35,12 +35,10 @@ jobs:
         run: |
           echo "${{ steps.strip_tag.outputs.tag }}" > VERSION
 
-      - name: Print Git Config
-        run: |
-          git config --global --list
-
       - name: Commit Changes
         run: |
+          git config --global --list
           git add VERSION
           git commit -S -m "chore(deps): bump version to ${{ steps.strip_tag.outputs.tag }} [skip ci]"
+          git log -1
           git push

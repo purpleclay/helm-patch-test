@@ -2,7 +2,7 @@ name: patch
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "*.*.*"
 
 jobs:
   patch:

@@ -1,5 +1,5 @@
 apiVersion: v2
 name: example
-version: 0.11.0
+version: 0.12.1
 description: Lets ensure the chart is patched
 appVersion: v0.1.0

@@ -16,9 +16,9 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_NSV }}
 
-      - name: Capture CI Variables
-        run: |
-          env | sort > github_env
+      # - name: Capture CI Variables
+      #   run: |
+      #     env | sort > github_env
 
       - name: Tag
         uses: dagger/dagger-for-github@v7
